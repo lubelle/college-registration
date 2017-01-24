@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                   http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>CE5Servlet</servlet-name>
+        <servlet-class>controller.StudentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InstructorServlet</servlet-name>
+        <servlet-class>controller.InstructorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CE5Servlet</servlet-name>
+        <url-pattern>/CE5Servlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InstructorServlet</servlet-name>
+        <url-pattern>/InstructorServlet</url-pattern>
+    </servlet-mapping>        
+    <resource-ref>
+        <description>MySQL Datasource CIS2454DB</description>
+        <res-ref-name>jdbc/cis2454db</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+</web-app>
